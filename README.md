@@ -113,7 +113,7 @@ Decide si deseas realizar otra conversión o salir de la aplicación.
 
 ## 📁 Estructura del Proyecto
 **Organización de carpetas:**
-    ```bash
+```bash
     conversor-de-moneda/
     │
     ├── ConsultarTasa.java       # Clase para consultar tasas y obtener divisas
