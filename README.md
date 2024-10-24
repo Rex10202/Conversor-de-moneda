@@ -90,6 +90,7 @@ Decide si deseas realizar otra conversión o salir de la aplicación.
 ---
 
 ## 🔍 Ejemplo de Ejecución
+**Print:**
     ```bash
     Lista de divisas disponibles:
     USD - United States Dollar
@@ -111,6 +112,7 @@ Decide si deseas realizar otra conversión o salir de la aplicación.
 ---
 
 ## 📁 Estructura del Proyecto
+**Organización de carpetas**
     ```bash
     conversor-de-moneda/
     │
