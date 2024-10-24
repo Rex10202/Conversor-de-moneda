@@ -112,7 +112,7 @@ Decide si deseas realizar otra conversión o salir de la aplicación.
 ---
 
 ## 📁 Estructura del Proyecto
-**Organización de carpetas**
+**Organización de carpetas:**
     ```bash
     conversor-de-moneda/
     │
