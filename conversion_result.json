@@ -19,5 +19,19 @@
     "cantidad": 10000.0,
     "montoConvertido": 2.3471,
     "tasaCambio": 2.3471E-4
+  },
+  {
+    "monedaBase": "COP",
+    "monedaDestino": "USD",
+    "cantidad": 520000.0,
+    "montoConvertido": 122.0492,
+    "tasaCambio": 2.3471E-4
+  },
+  {
+    "monedaBase": "USD",
+    "monedaDestino": "COP",
+    "cantidad": 4500.0,
+    "montoConvertido": 1.9172330099999998E7,
+    "tasaCambio": 4260.5178
   }
 ]

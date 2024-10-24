@@ -1,4 +1,5 @@
 import java.io.IOException;
+import java.util.Map;
 import java.util.Scanner;
 
 public class Principal {
@@ -7,45 +8,22 @@ public class Principal {
             ConsultarTasa consultarTasa = new ConsultarTasa();
             GeneradorDeArchivo generadorDeArchivo = new GeneradorDeArchivo();
 
+            // Obtener todas las divisas disponibles
+            Map<String, String> divisas = consultarTasa.obtenerDivisasDisponibles();
+            System.out.println("Lista de divisas disponibles:");
+            divisas.forEach((codigo, nombre) -> System.out.println(codigo + " - " + nombre));
+
             while (true) {
-                System.out.println("""
-                        **************************
-                        Selecciona una opción dentro del menú:
-                        1 - USD a ARS
-                        2 - USD a BRL
-                        3 - USD a COP
-                        4 - BRL a USD
-                        5 - ARS a USD
-                        6 - COP a USD
-                        7 - Salir
-                        **************************
-                        """);
+                System.out.print("\nSeleccione la moneda base: ");
+                String monedaBase = opcion.next().toUpperCase();
 
-                int categoria = opcion.nextInt();
+                System.out.print("Seleccione la moneda destino: ");
+                String monedaDestino = opcion.next().toUpperCase();
 
-                if (categoria == 7) {
-                    System.out.println("¡Hasta luego!");
-                    break;
+                if (!divisas.containsKey(monedaBase) || !divisas.containsKey(monedaDestino)) {
+                    System.out.println("Divisas inválidas. Intente nuevamente.");
+                    continue;
                 }
-
-                // Definir monedas según la opción elegida
-                String monedaBase = switch (categoria) {
-                    case 1, 2, 3 -> "USD";
-                    case 4 -> "BRL";
-                    case 5 -> "ARS";
-                    case 6 -> "COP";
-                    default -> throw new IllegalArgumentException("Opción no válida.");
-                };
-
-                String monedaDestino = switch (categoria) {
-                    case 1 -> "ARS";
-                    case 2 -> "BRL";
-                    case 3 -> "COP";
-                    case 4 -> "USD";
-                    case 5 -> "USD";
-                    case 6 -> "USD";
-                    default -> throw new IllegalArgumentException("Opción no válida.");
-                };
 
                 // Realizar la consulta de la tasa
                 try {
@@ -64,6 +42,13 @@ public class Principal {
                     System.out.println("Conversión guardada en archivo JSON.");
                 } catch (IOException e) {
                     System.err.println("Error: " + e.getMessage());
+                }
+
+                System.out.print("\n¿Desea realizar otra conversión? (s/n): ");
+                String continuar = opcion.next().toLowerCase();
+                if (!continuar.equals("s")) {
+                    System.out.println("¡Hasta luego!");
+                    break;
                 }
             }
         }
