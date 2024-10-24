@@ -1,4 +1,4 @@
-# 🌍 Currency Exchange App  
+# 🌍 Conversor De Moneda App
 
 [![MIT License](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)  
 [![Java](https://img.shields.io/badge/Java-11+-orange.svg)](https://openjdk.org/projects/jdk/11/)  
