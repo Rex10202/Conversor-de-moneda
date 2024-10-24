@@ -19,10 +19,6 @@ Currency Exchange App es una aplicación escrita en **Java** para gestionar conv
 - [💻 Uso](#-uso)
 - [🔍 Ejemplo de Ejecución](#-ejemplo-de-ejecución)
 - [📁 Estructura del Proyecto](#-estructura-del-proyecto)
-- [🤝 Contribución](#-contribución)
-- [📝 Licencia](#-licencia)
-- [🛠️ Recursos Adicionales](#️-recursos-adicionales)
-- [📧 Contacto](#-contacto)
 
 ---
 
@@ -91,31 +87,36 @@ Introduce el monto que deseas convertir.
 Recibe el resultado y observa cómo se guarda en un archivo JSON.
 Decide si deseas realizar otra conversión o salir de la aplicación.
 
+---
+
 ## 🔍 Ejemplo de Ejecución
-Lista de divisas disponibles:
-USD - United States Dollar
-EUR - Euro
-JPY - Japanese Yen
-COP - Colombian Peso
-...
+    ```bash
+    Lista de divisas disponibles:
+    USD - United States Dollar
+    EUR - Euro
+    JPY - Japanese Yen
+    COP - Colombian Peso
+    ...
 
-Seleccione la moneda base: USD
-Seleccione la moneda destino: COP
-Tasa de cambio: 1 USD = 4500.0000 COP
-Ingrese la cantidad a convertir: 100
-Monto convertido: 450000.00 COP
-Conversión guardada en archivo JSON.
+    Seleccione la moneda base: USD
+    Seleccione la moneda destino: COP
+    Tasa de cambio: 1 USD = 4500.0000 COP
+    Ingrese la cantidad a convertir: 100
+    Monto convertido: 450000.00 COP
+    Conversión guardada en archivo JSON.
 
-¿Desea realizar otra conversión? (s/n): n
-¡Hasta luego!
+    ¿Desea realizar otra conversión? (s/n): n
+    ¡Hasta luego!
+
+---
 
 ## 📁 Estructura del Proyecto
-
-currency-exchange-app/
-│
-├── ConsultarTasa.java       # Clase para consultar tasas y obtener divisas
-├── Principal.java           # Clase principal con la lógica del menú
-├── Tasa.java                # Modelo para los datos de conversión
-├── GeneradorDeArchivo.java  # Clase para gestionar archivos JSON
-└── README.md                # Documentación del proyecto
+    ```bash
+    conversor-de-moneda/
+    │
+    ├── ConsultarTasa.java       # Clase para consultar tasas y obtener divisas
+    ├── Principal.java           # Clase principal con la lógica del menú
+    ├── Tasa.java                # Modelo para los datos de conversión
+    ├── GeneradorDeArchivo.java  # Clase para gestionar archivos JSON
+    └── README.md                # Documentación del proyecto
 
